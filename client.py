@@ -1,10 +1,10 @@
 import requests
 import json
 
-url = "http://localhost/deploy"
+url = "http://localhost:8080/deploy"
 data = {
-    "name": "your-repo-folder-name",
-    "branch": "your-branch-name"
+    "name": "terraform",
+    "branch": "main"
 }
 
 response = requests.post(url, json=data)
