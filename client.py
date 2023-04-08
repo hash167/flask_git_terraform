@@ -1,0 +1,17 @@
+import requests
+import json
+
+url = "http://localhost/deploy"
+data = {
+    "name": "your-repo-folder-name",
+    "branch": "your-branch-name"
+}
+
+response = requests.post(url, json=data)
+
+if response.status_code == 200:
+    print("Request succeeded:")
+    print(response.text)
+else:
+    print(f"Request failed with status code {response.status_code}:")
+    print(response.text)
